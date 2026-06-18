@@ -47,7 +47,7 @@ variable "rds_defaults" {
     allocated_storage     = "30"
     max_allocated_storage = "50"
     engine                = "postgres"
-    engine_version        = "14.15"
+    engine_version        = "14.22"
     instance_class        = "db.t3.micro"
     username              = "postgres"
   }
