@@ -112,3 +112,16 @@ Destroy all resources for an environment when they are no longer needed. This ac
 
 
 
+# Troubleshooting
+Below is the summary of all errors and their fixes at a glance:
+
+| # | Error | Fix location |
+|---|---|---|
+| #1 | .terraform/ accidentally commited to git | Add .terraform/ to .gitignore, run git rm --cached|
+| #2 | CannotPullContainerError — wrong ECR name | Fix image URI in advance-terraform/ecs.tf|
+| #3 | ECS tasks cannot reach ECR (no NAT route) | Add aws_route.private_nat_route in network.tf |
+| #4 | NAT Gateway EIP allocation ID not found | Replace aws_eip data source with resource in network.tf |
+| #5 | DB_LINK URL broken by special characters | Set special = false on random_password in rds.tf|
+
+
+
