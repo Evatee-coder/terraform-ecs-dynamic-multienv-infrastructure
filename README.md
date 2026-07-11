@@ -8,7 +8,7 @@
 ![Amazon ECS](https://img.shields.io/badge/Amazon-ECS_Fargate-FF9900?logo=amazonaws)
 ![Amazon RDS](https://img.shields.io/badge/Database-Amazon_RDS-blue)
 ![Route53](https://img.shields.io/badge/DNS-Route53-success)
-![License](https://img.shields.io/badge/License-MIT-green)
+
 
 </p>
 
@@ -91,30 +91,9 @@ The project also demonstrates automatic ECS Service Auto Scaling driven by Cloud
 
 # 🏗 Architecture
 
-![Architecture Diagram](images/victor-adetayo-aws-architecture-dark.drawio.png)
+The infrastructure follows a production-oriented AWS architecture designed for scalability, security, and maintainability. It provisions networking, compute, database, DNS, and load balancing resources using a single reusable Terraform codebase that supports both Development and Production environments.
 
-### Architecture Overview
-
-The application follows a production-oriented AWS architecture:
-
-```
-                    Internet
-                        │
-                        ▼
-                 Amazon Route53
-                        │
-                        ▼
-             Application Load Balancer
-                        │
-                        ▼
-               Amazon ECS Fargate
-                        │
-                        ▼
-               Student Portal Container
-                        │
-                        ▼
-             Amazon RDS PostgreSQL
-```
+![Architecture Diagram](docs/images/victor-adetayo-aws-architecture-dark.drawio.png)
 
 ### Architecture Highlights
 
@@ -285,33 +264,7 @@ Update the environment-specific configuration files if your AWS resources use di
 
 # 📂 Repository Structure
 
-```text
-terraform-ecs-dynamic-multienv-infrastructure
-│
-├── advance-terraform/
-│   ├── alb.tf
-│   ├── ecs.tf
-│   ├── iam.tf
-│   ├── kms.tf
-│   ├── network.tf
-│   ├── rds.tf
-│   ├── route53.tf
-│   ├── security-groups.tf
-│   ├── variables.tf
-│   ├── locals.tf
-│   ├── outputs.tf
-│   ├── provider.tf
-│   ├── versions.tf
-│   └── vars/
-│       ├── dev.tfvars
-│       ├── prod.tfvars
-│       ├── dev.tfbackend
-│       └── prod.tfbackend
-│
-├── images/
-│
-└── README.md
-```
+![project structure](docs/images/projectstructure.png)
 
 The infrastructure is organized into modular Terraform configuration files, making each AWS service easy to understand, maintain, and extend.
 
@@ -328,7 +281,7 @@ The infrastructure can be deployed to either the **Development** or **Production
 ```bash
 git clone https://github.com/Evatee-coder/terraform-ecs-dynamic-multienv-infrastructure.git
 
-cd terraform-ecs-dynamic-multienv-infrastructure/advance-terraform
+cd terraform-ecs-dynamic-multienv-infrastructure/infra
 ```
 
 ---
@@ -512,19 +465,7 @@ The ECS service automatically adjusts the number of running tasks based on appli
 ---
 
 # 📸 Project Outputs
-
-The following screenshots demonstrate a successful end-to-end deployment.
-
-Examples include:
-
-- Application Login Page
-- ECS Cluster
-- ECS Service
-- Running Tasks
-- Application Load Balancer
-- Route53 DNS
-- Amazon RDS
-- CloudWatch Metrics
+The screenshots below confirm the end-to-end deployment: DNS resolving correctly, TLS certificate active, the ALB routing traffic to ECS, and the application successfully connecting to RDS.
 
 ---
 
@@ -540,7 +481,7 @@ https://dev.studentportal.eva-tee.com/login
 
 ## Application Screenshot
 
-![Student Portal Login](images/studentportal-login.png)
+![Student Portal Login](docs/images/studentportal-login.png)
 
 ---
 
