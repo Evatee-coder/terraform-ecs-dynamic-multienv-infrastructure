@@ -218,8 +218,11 @@ __marimo__/
 .streamlit/secrets.toml
 
 .terraform/
-.terraform.lock.hcl
-*.tfstate
+*.tfstate.*
+crash.log
 *.tfstate.backup
 *.tfvars
+!infra/vars/dev.tfvars
+!infra/vars/prod.tfvars
+*.tfplan
 terraform.tfplan
