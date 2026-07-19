@@ -21,7 +21,7 @@ Designed with enterprise DevOps practices in mind, the infrastructure supports *
 ---
 
 # 📚 Table of Contents
-- [Project Outputs](#-project-outputs)
+- [Project Showcase](#-project-showcase)
 - [Project Overview](#-project-overview)
 - [Why This Project?](#-why-this-project?)
 - [Architecture](#-architecture)
@@ -41,7 +41,7 @@ Designed with enterprise DevOps practices in mind, the infrastructure supports *
 
 ---
 
-# 📸 Project Outputs
+# 📸 Project Showcase
 The screenshots below confirm the end-to-end deployment: DNS resolving correctly, TLS certificate active, the ALB routing traffic to ECS, and the application successfully connecting to RDS.
 
 ---
