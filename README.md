@@ -21,7 +21,7 @@ Designed with enterprise DevOps practices in mind, the infrastructure supports *
 ---
 
 # 📚 Table of Contents
-
+- [Project Outputs](#-project-outputs)
 - [Project Overview](#-project-overview)
 - [Why This Project?](#-why-this-project?)
 - [Architecture](#-architecture)
@@ -33,7 +33,6 @@ Designed with enterprise DevOps practices in mind, the infrastructure supports *
 - [Engineering Challenges](#-engineering-challenges)
 - [Deployment](#-deployment)
 - [Auto Scaling and Load Testing](#-auto-scaling-and-load-testing)
-- [Project Outputs](#-project-outputs)
 - [Cleanup](#-cleanup)
 - [Production Roadmap](#-production-roadmap)
 - [Repository Structure](#-repository-structure)
@@ -41,6 +40,29 @@ Designed with enterprise DevOps practices in mind, the infrastructure supports *
 
 
 ---
+
+# 📸 Project Outputs
+The screenshots below confirm the end-to-end deployment: DNS resolving correctly, TLS certificate active, the ALB routing traffic to ECS, and the application successfully connecting to RDS.
+
+---
+
+## 🌐 Live Application
+
+> **Development Environment**
+
+```
+https://dev.studentportal.eva-tee.com/login
+```
+
+---
+
+## Application Screenshot
+
+![Student Portal Login](docs/images/studentportal-login.png)
+
+---
+
+
 
 # 📖 Project Overview
 
@@ -298,28 +320,6 @@ Metrics
 The ECS service automatically adjusts the number of running tasks based on application load.
 
 ---
-
-# 📸 Project Outputs
-The screenshots below confirm the end-to-end deployment: DNS resolving correctly, TLS certificate active, the ALB routing traffic to ECS, and the application successfully connecting to RDS.
-
----
-
-## 🌐 Live Application
-
-> **Development Environment**
-
-```
-https://dev.studentportal.eva-tee.com/login
-```
-
----
-
-## Application Screenshot
-
-![Student Portal Login](docs/images/studentportal-login.png)
-
----
-
 # 🧹 Cleanup
 
 To remove deployed infrastructure, destroy the target environment.
